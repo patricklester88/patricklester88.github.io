@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPS vs Wi-Fi Location | WhereAmI</title>
+<meta name="description" content="Learn the difference between GPS location and Wi-Fi location, when each method is used, why accuracy varies, and how your browser estimates where you are.">
+<style>
+:root{--bg1:#071a2f;--bg2:#12385f;--card:rgba(255,255,255,.08);--card2:rgba(255,255,255,.12);--text:#fff;--muted:#c9d8e8;--accent:#63c7ff;--accent2:#9fd3ff;--line:rgba(255,255,255,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(99,199,255,.20),transparent 32%),linear-gradient(135deg,var(--bg1),var(--bg2));line-height:1.65}
+header{text-align:center;padding:28px 18px 18px;background:rgba(0,0,0,.22);border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:2.2rem}
+header p{margin:6px 0 18px;color:var(--muted)}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:9px 14px;border:1px solid rgba(159,211,255,.55);border-radius:999px;background:rgba(255,255,255,.06)}
+nav a:hover{background:rgba(99,199,255,.18)}
+main{max-width:1080px;margin:0 auto;padding:32px 18px}
+.hero,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.24)}
+.hero{padding:34px 26px;text-align:center;margin-bottom:22px}
+.hero h2{margin:0 0 12px;font-size:2.15rem;color:var(--accent2)}
+.hero p{max-width:780px;margin:0 auto;color:var(--muted);font-size:1.08rem}
+.grid,.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}
+.card,.panel{padding:22px}
+.panel{background:var(--card2);border:1px solid var(--line);border-radius:16px}
+h2,h3{color:var(--accent2);line-height:1.25}
+.card h2:first-child{margin-top:0}
+a{color:var(--accent)}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid rgba(159,211,255,.55);color:var(--accent2);font-size:.9rem;margin-bottom:10px}
+table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden;margin:16px 0}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--accent2);background:rgba(0,0,0,.18)}
+.note{border-left:4px solid var(--accent);padding:14px 16px;background:rgba(99,199,255,.10);border-radius:10px;color:var(--muted)}
+footer{text-align:center;padding:28px 18px;color:var(--muted);border-top:1px solid var(--line);background:rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 WhereAmI</h1>
+<p>Know exactly where you are. Create a simple location certificate.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="how-gps-works.html">How GPS Works</a>
+<a href="why-location-can-be-inaccurate.html">Location Accuracy</a>
+<a href="gps-vs-wifi-location.html">GPS vs Wi-Fi</a>
+<a href="faq.html">FAQ</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<h2>GPS vs Wi-Fi Location</h2>
+<p>Your device may use GPS, Wi-Fi, mobile networks and IP information to estimate where you are. This guide explains the difference between GPS location and Wi-Fi location, why both are useful, and why they can sometimes give different results.</p>
+</section>
+
+<section class="compare">
+<div class="panel">
+<span class="badge">GPS location</span>
+<h3>🛰 Satellite-based</h3>
+<p>GPS uses signals from satellites orbiting the Earth. It is often very good outdoors, especially when your device has a clear view of the sky.</p>
+</div>
+<div class="panel">
+<span class="badge">Wi-Fi location</span>
+<h3>📶 Network-based</h3>
+<p>Wi-Fi location estimates where you are by comparing nearby wireless networks with known location databases. It can be very useful indoors and in cities.</p>
+</div>
+</section>
+
+<section class="card">
+<h2>What is GPS location?</h2>
+<p>GPS stands for <strong>Global Positioning System</strong>. Your phone or other device receives timing signals from satellites and calculates its position from those signals.</p>
+<p>GPS can be highly accurate outdoors, but it works best when the device can receive clear satellite signals. Buildings, roofs, underground locations, tunnels and dense trees can reduce accuracy.</p>
+</section>
+
+<section class="card">
+<h2>What is Wi-Fi location?</h2>
+<p>Wi-Fi location does not mean your device is using your Wi-Fi password or reading your private network data. Instead, your device detects nearby Wi-Fi network names and signal strengths, then compares them with location information from mapping databases.</p>
+<p>This can help your device estimate its position quickly, especially indoors, where GPS satellite signals may be weak or unavailable.</p>
+</section>
+
+<section class="card">
+<h2>Side-by-side comparison</h2>
+<table>
+<tr><th>Feature</th><th>GPS</th><th>Wi-Fi Location</th></tr>
+<tr><td>Best environment</td><td>Outdoors with a clear view of the sky</td><td>Indoors, urban areas and places with many Wi-Fi networks</td></tr>
+<tr><td>Typical strength</td><td>Can be very accurate in open areas</td><td>Can be fast and useful where GPS is weak</td></tr>
+<tr><td>Typical weakness</td><td>Can struggle indoors or near tall buildings</td><td>Depends on available Wi-Fi networks and database accuracy</td></tr>
+<tr><td>Needs internet?</td><td>GPS satellite signals do not require internet, but maps and address lookup usually do</td><td>Usually needs internet access to compare networks with location databases</td></tr>
+<tr><td>Common devices</td><td>Phones, watches, sat navs, some tablets</td><td>Phones, tablets, laptops and other Wi-Fi-enabled devices</td></tr>
+</table>
+</section>
+
+<section class="card">
+<h2>Why your phone may be more accurate than your laptop</h2>
+<p>Many smartphones include dedicated GPS or GNSS hardware. They may also use mobile networks, Wi-Fi, Bluetooth and motion sensors together.</p>
+<p>Many laptops do not have true GPS hardware. A laptop may estimate location mainly from Wi-Fi networks or your internet connection. This is why a phone can sometimes show a more precise position than a desktop or laptop computer.</p>
+</section>
+
+<section class="card">
+<h2>Why GPS and Wi-Fi can disagree</h2>
+<div class="grid">
+<div><h3>🏙 Reflected satellite signals</h3><p>In city streets, GPS signals can bounce off buildings before reaching your device.</p></div>
+<div><h3>📶 Moved Wi-Fi routers</h3><p>A router may have moved since its location was recorded in a database.</p></div>
+<div><h3>🏠 Indoor positioning</h3><p>Indoors, your device may trust Wi-Fi more than GPS because satellite signals are weaker.</p></div>
+<div><h3>🌐 IP location limits</h3><p>If only IP location is available, the result may point to your internet provider or a nearby town rather than your exact position.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>Which method does WhereAmI use?</h2>
+<p>WhereAmI receives location information from your browser. Your browser and device decide which sources to use. That may include GPS, Wi-Fi, mobile network information or IP-based estimates.</p>
+<p>WhereAmI then displays the information supplied by your device, including coordinates and an accuracy estimate where available.</p>
+<p class="note">The accuracy figure is an estimate. It helps you understand how confident your device is, but it should not be treated as a legal guarantee.</p>
+</section>
+
+<section class="card">
+<h2>How to improve your location result</h2>
+<ul>
+<li>Use a smartphone if you need the best chance of a precise location.</li>
+<li>Move outdoors or near a window if GPS is struggling.</li>
+<li>Enable Wi-Fi, even if you are not connected to a Wi-Fi network.</li>
+<li>Allow your browser to access your location.</li>
+<li>Wait a few seconds for the device to improve its estimate.</li>
+<li>Avoid tunnels, basements and areas surrounded by tall buildings where possible.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Frequently asked questions</h2>
+<h3>Does Wi-Fi location mean someone can see my private Wi-Fi data?</h3>
+<p>No. Location systems generally use nearby network identifiers and signal strengths to estimate position. They do not need your Wi-Fi password.</p>
+<h3>Can GPS work without Wi-Fi?</h3>
+<p>Yes. GPS signals come from satellites. However, internet access and Wi-Fi can help your device find its location faster and load address information.</p>
+<h3>Can Wi-Fi location work without GPS?</h3>
+<p>Yes. A laptop or tablet without GPS may still estimate its location using Wi-Fi networks and IP information.</p>
+<h3>Which is more accurate?</h3>
+<p>It depends on where you are. GPS is often better outdoors. Wi-Fi can be more helpful indoors or in dense urban areas.</p>
+</section>
+
+<section class="card">
+<h2>Related WhereAmI guides</h2>
+<ul>
+<li><a href="how-gps-works.html">How GPS Works</a></li>
+<li><a href="why-location-can-be-inaccurate.html">Why Location Can Be Inaccurate</a></li>
+<li>Browser Location Permissions</li>
+<li>Latitude and Longitude Explained</li>
+<li>Sharing Your Location Safely</li>
+</ul>
+</section>
+</main>
+
+<footer>
+<p>© 2026 WhereAmI</p>
+<p><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a> · <a href="contact.html">Contact</a></p>
+</footer>
+</body>
+</html>

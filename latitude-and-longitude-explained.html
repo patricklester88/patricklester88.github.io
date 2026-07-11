@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Latitude and Longitude Explained | WhereAmI</title>
+
+<meta name="description" content="Learn what latitude and longitude mean, how coordinates identify places on Earth, how to read them, and how WhereAmI uses geographic coordinates.">
+
+<style>
+:root{
+--bg1:#071a2f;
+--bg2:#12385f;
+--card:rgba(255,255,255,.08);
+--card2:rgba(255,255,255,.12);
+--text:#ffffff;
+--muted:#c9d8e8;
+--accent:#63c7ff;
+--accent2:#9fd3ff;
+--line:rgba(255,255,255,.18);
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:
+radial-gradient(circle at top left,rgba(99,199,255,.20),transparent 32%),
+linear-gradient(135deg,var(--bg1),var(--bg2));
+line-height:1.65;
+}
+
+header{
+text-align:center;
+padding:28px 18px 18px;
+background:rgba(0,0,0,.22);
+border-bottom:1px solid var(--line);
+}
+
+header h1{
+margin:0;
+font-size:2.2rem;
+}
+
+header p{
+margin:6px 0 18px;
+color:var(--muted);
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+padding:9px 14px;
+border:1px solid rgba(159,211,255,.55);
+border-radius:999px;
+background:rgba(255,255,255,.06);
+}
+
+nav a:hover{
+background:rgba(99,199,255,.18);
+}
+
+main{
+max-width:1080px;
+margin:0 auto;
+padding:32px 18px;
+}
+
+.hero,.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:18px;
+box-shadow:0 18px 50px rgba(0,0,0,.24);
+}
+
+.hero{
+padding:34px 26px;
+text-align:center;
+margin-bottom:22px;
+}
+
+.hero h2{
+margin:0 0 12px;
+font-size:2.15rem;
+color:var(--accent2);
+}
+
+.hero p{
+max-width:780px;
+margin:0 auto;
+color:var(--muted);
+font-size:1.08rem;
+}
+
+.card{
+padding:22px;
+margin-bottom:22px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:16px;
+margin:22px 0;
+}
+
+.panel{
+background:var(--card2);
+border:1px solid var(--line);
+border-radius:16px;
+padding:22px;
+}
+
+h2,h3{
+color:var(--accent2);
+line-height:1.25;
+}
+
+.card h2:first-child{
+margin-top:0;
+}
+
+a{
+color:var(--accent);
+}
+
+.coord{
+font-family:Consolas,Monaco,monospace;
+font-size:1.1rem;
+background:rgba(0,0,0,.25);
+padding:12px 14px;
+border-radius:10px;
+display:inline-block;
+margin:6px 0;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:rgba(255,255,255,.06);
+border-radius:14px;
+overflow:hidden;
+margin:16px 0;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid var(--line);
+text-align:left;
+vertical-align:top;
+}
+
+th{
+color:var(--accent2);
+background:rgba(0,0,0,.18);
+}
+
+.note{
+border-left:4px solid var(--accent);
+padding:14px 16px;
+background:rgba(99,199,255,.10);
+border-radius:10px;
+color:var(--muted);
+}
+
+footer{
+text-align:center;
+padding:28px 18px;
+color:var(--muted);
+border-top:1px solid var(--line);
+background:rgba(0,0,0,.18);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌍 WhereAmI</h1>
+<p>Understanding the coordinates that describe every place on Earth.</p>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="how-gps-works.html">How GPS Works</a>
+<a href="why-location-can-be-inaccurate.html">Location Accuracy</a>
+<a href="gps-vs-wifi-location.html">GPS vs Wi-Fi</a>
+<a href="browser-location-permissions.html">Permissions</a>
+<a href="latitude-and-longitude-explained.html">Latitude & Longitude</a>
+</nav>
+</header>
+
+<main>
+
+<section class="hero">
+<h2>Latitude and Longitude Explained</h2>
+<p>Latitude and longitude are the global coordinate system used to describe locations on Earth. Together, they can identify a place with far greater precision than a town name, postcode or street address.</p>
+</section>
+
+<section class="card">
+<h2>What are geographic coordinates?</h2>
+<p>Geographic coordinates are numbers that describe a position on the Earth's surface. The two main values are <strong>latitude</strong> and <strong>longitude</strong>.</p>
+<p>When combined, they create a unique coordinate for almost any location in the world.</p>
+<p class="coord">51.5074, -0.1278</p>
+<p>This example points to central London.</p>
+</section>
+
+<section class="grid">
+
+<div class="panel">
+<h3>↕ Latitude</h3>
+<p>Latitude measures how far north or south a place is from the Equator.</p>
+<p>It ranges from <strong>90° north</strong> to <strong>90° south</strong>.</p>
+</div>
+
+<div class="panel">
+<h3>↔ Longitude</h3>
+<p>Longitude measures how far east or west a place is from the Prime Meridian.</p>
+<p>It ranges from <strong>180° east</strong> to <strong>180° west</strong>.</p>
+</div>
+
+</section>
+
+<section class="card">
+<h2>Understanding latitude</h2>
+<p>The Equator is the starting line for latitude and is labelled <strong>0°</strong>.</p>
+<ul>
+<li>Locations north of the Equator have positive latitude values.</li>
+<li>Locations south of the Equator have negative latitude values.</li>
+<li>The North Pole is approximately 90° latitude.</li>
+<li>The South Pole is approximately -90° latitude.</li>
+</ul>
+
+<p>Examples:</p>
+<p class="coord">London: 51.5074</p><br>
+<p class="coord">Sydney: -33.8688</p>
+</section>
+
+<section class="card">
+<h2>Understanding longitude</h2>
+<p>The Prime Meridian is the starting line for longitude and is labelled <strong>0°</strong>. It passes through Greenwich in London.</p>
+<ul>
+<li>Locations east of the Prime Meridian usually have positive longitude values.</li>
+<li>Locations west of the Prime Meridian usually have negative longitude values.</li>
+<li>Longitude reaches up to 180° east or west.</li>
+</ul>
+
+<p>Examples:</p>
+<p class="coord">London: -0.1278</p><br>
+<p class="coord">Tokyo: 139.6917</p>
+</section>
+
+<section class="card">
+<h2>How coordinates are written</h2>
+
+<table>
+<tr>
+<th>Format</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Decimal Degrees</td>
+<td>51.5074, -0.1278</td>
+<td>The most common format used by websites, apps and GPS devices.</td>
+</tr>
+
+<tr>
+<td>Degrees, Minutes and Seconds</td>
+<td>51°30'26.6"N, 0°07'40.1"W</td>
+<td>A traditional format often used in navigation and mapping.</td>
+</tr>
+
+<tr>
+<td>Degrees and Decimal Minutes</td>
+<td>51°30.443'N, 0°07.668'W</td>
+<td>A mixed format used in some marine and aviation systems.</td>
+</tr>
+</table>
+
+</section>
+
+<section class="card">
+<h2>Which number comes first?</h2>
+<p>Latitude is normally written first, followed by longitude.</p>
+
+<p class="coord">Latitude, Longitude</p>
+
+<p>For example:</p>
+
+<p class="coord">51.5074, -0.1278</p>
+
+<p>This means 51.5074 degrees north and 0.1278 degrees west.</p>
+
+<p class="note">Some mapping systems may display longitude first. Always check the format before entering coordinates.</p>
+</section>
+
+<section class="card">
+<h2>Why are coordinates useful?</h2>
+
+<div class="grid">
+<div>
+<h3>📍 Precise locations</h3>
+<p>Coordinates can identify a place even when there is no formal address.</p>
+</div>
+
+<div>
+<h3>🥾 Outdoor activities</h3>
+<p>Walkers, hikers and explorers use coordinates to describe remote positions.</p>
+</div>
+
+<div>
+<h3>🚑 Emergency services</h3>
+<p>Coordinates can help communicate a location when street information is unclear.</p>
+</div>
+
+<div>
+<h3>📷 Photography and wildlife</h3>
+<p>Coordinates can record where an image, sighting or observation was made.</p>
+</div>
+</div>
+
+</section>
+
+<section class="card">
+<h2>How accurate are coordinates?</h2>
+<p>The number of decimal places affects the apparent precision of a coordinate.</p>
+
+<table>
+<tr>
+<th>Decimal places</th>
+<th>Approximate precision</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>About 11 kilometres</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>About 1.1 kilometres</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>About 110 metres</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>About 11 metres</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>About 1 metre</td>
+</tr>
+</table>
+
+<p class="note">More decimal places do not guarantee that the original measurement was truly that accurate. Device and signal quality still matter.</p>
+</section>
+
+<section class="card">
+<h2>How WhereAmI uses latitude and longitude</h2>
+<p>When you allow browser location access, WhereAmI receives an estimated latitude and longitude from your device.</p>
+<p>These coordinates can be shown alongside your approximate address, date, time and reported accuracy. They may also be included in your downloadable location certificate.</p>
+<p>WhereAmI displays the coordinates supplied by your browser and does not independently control the underlying GPS or network calculations.</p>
+</section>
+
+<section class="card">
+<h2>Frequently asked questions</h2>
+
+<h3>Can two places have the same coordinates?</h3>
+<p>No. A latitude and longitude pair identifies one position on the Earth's surface, although rounded coordinates can cover a wider area.</p>
+
+<h3>Why are some coordinates negative?</h3>
+<p>Negative latitude values indicate locations south of the Equator. Negative longitude values indicate locations west of the Prime Meridian.</p>
+
+<h3>Can I paste coordinates into a map?</h3>
+<p>Yes. Most online maps accept decimal coordinates entered as latitude followed by longitude.</p>
+
+<h3>Are coordinates better than an address?</h3>
+<p>They can be more precise, especially in rural areas, parks, beaches, woodland and places without a street address.</p>
+</section>
+
+<section class="card">
+<h2>Related WhereAmI guides</h2>
+<ul>
+<li><a href="how-gps-works.html">How GPS Works</a></li>
+<li><a href="why-location-can-be-inaccurate.html">Why Location Can Be Inaccurate</a></li>
+<li><a href="gps-vs-wifi-location.html">GPS vs Wi-Fi Location</a></li>
+<li><a href="browser-location-permissions.html">Browser Location Permissions</a></li>
+<li>What Is Reverse Geocoding?</li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 WhereAmI</p>
+<p>
+<a href="index.html">Home</a> ·
+<a href="about.html">About</a> ·
+<a href="privacy.html">Privacy</a> ·
+<a href="terms.html">Terms</a> ·
+<a href="cookies.html">Cookies</a> ·
+<a href="contact.html">Contact</a>
+</p>
+</footer>
+
+</body>
+</html>

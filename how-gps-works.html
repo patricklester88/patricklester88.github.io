@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How GPS Works | WhereAmI</title>
+<meta name="description" content="Learn how GPS works, why location accuracy varies, and how WhereAmI uses browser location data.">
+<style>
+:root{--bg1:#071a2f;--bg2:#12385f;--card:rgba(255,255,255,.08);--card2:rgba(255,255,255,.12);--text:#fff;--muted:#c9d8e8;--accent:#63c7ff;--accent2:#9fd3ff;--line:rgba(255,255,255,.18)}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(99,199,255,.20),transparent 32%),linear-gradient(135deg,var(--bg1),var(--bg2));line-height:1.65}
+header{text-align:center;padding:28px 18px 18px;background:rgba(0,0,0,.22);border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:2.2rem}header p{margin:6px 0 18px;color:var(--muted)}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:9px 14px;border:1px solid rgba(159,211,255,.55);border-radius:999px;background:rgba(255,255,255,.06)}
+nav a:hover{background:rgba(99,199,255,.18)}
+main{max-width:1080px;margin:0 auto;padding:32px 18px}
+.hero,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.24)}
+.hero{padding:34px 26px;text-align:center;margin-bottom:22px}.hero h2{margin:0 0 12px;font-size:2.15rem;color:var(--accent2)}.hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:1.08rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}.card{padding:22px}h2,h3{color:var(--accent2);line-height:1.25}h2{margin-top:34px}.card h2:first-child{margin-top:0}.card h3{margin-top:0}a{color:var(--accent)}
+.diagram{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;text-align:center;margin:20px 0}.bubble{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:130px}.big{font-size:2.4rem;display:block;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.06);border-radius:14px;overflow:hidden;margin:16px 0}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--accent2);background:rgba(0,0,0,.18)}
+.note{border-left:4px solid var(--accent);padding:14px 16px;background:rgba(99,199,255,.10);border-radius:10px;color:var(--muted)}
+footer{text-align:center;padding:28px 18px;color:var(--muted);border-top:1px solid var(--line);background:rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 WhereAmI</h1>
+<p>Know exactly where you are. Create a simple location certificate.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="how-gps-works.html">How GPS Works</a>
+<a href="faq.html">FAQ</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<h2>How GPS Works</h2>
+<p>GPS helps your device estimate where you are by listening to signals from satellites high above the Earth. This guide explains the process in simple language, why accuracy can vary, and how WhereAmI uses the location information your browser provides.</p>
+</section>
+
+<section class="card">
+<h2>What does GPS mean?</h2>
+<p><strong>GPS</strong> stands for <strong>Global Positioning System</strong>. It is a satellite navigation system used around the world by phones, cars, watches, cameras, aircraft, ships and many other devices.</p>
+<p>GPS satellites continuously transmit radio signals containing timing and position information. Your device receives these signals and uses them to estimate your location.</p>
+</section>
+
+<section class="grid">
+<div class="card"><h3>🛰 Satellites</h3><p>Satellites orbit the Earth and send precise timing signals.</p></div>
+<div class="card"><h3>📱 Your device</h3><p>Your phone or computer listens for available satellite and network signals.</p></div>
+<div class="card"><h3>📍 Your position</h3><p>The device calculates your approximate latitude, longitude and accuracy.</p></div>
+</section>
+
+<section class="card">
+<h2>How does your device find its position?</h2>
+<p>GPS uses a method called <strong>trilateration</strong>. Instead of measuring angles, your device estimates how far it is from several satellites. When it has enough distance measurements, it can calculate where those distances overlap.</p>
+<div class="diagram">
+<div class="bubble"><span class="big">1️⃣</span>One satellite gives a broad possible area.</div>
+<div class="bubble"><span class="big">2️⃣</span>Two satellites narrow the possible area.</div>
+<div class="bubble"><span class="big">3️⃣</span>Three or more satellites refine the position.</div>
+<div class="bubble"><span class="big">4️⃣</span>A fourth signal helps correct timing errors.</div>
+</div>
+<p>A fourth satellite is normally needed because your phone's clock is not as accurate as the atomic clocks used by satellites. The extra signal helps correct very small timing differences.</p>
+</section>
+
+<section class="card">
+<h2>GPS is not the only location method</h2>
+<p>Modern devices often combine GPS with other location sources. This is why your phone may find your location quickly even indoors, where satellite signals can be weaker.</p>
+<ul>
+<li><strong>GPS/GNSS satellites</strong> for outdoor positioning.</li>
+<li><strong>Wi-Fi positioning</strong> using nearby wireless networks.</li>
+<li><strong>Mobile phone towers</strong> to estimate a wider area.</li>
+<li><strong>IP address location</strong>, which is usually much less precise.</li>
+<li><strong>Bluetooth beacons</strong> in some indoor environments.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>How accurate is GPS?</h2>
+<p>Accuracy varies depending on your device, surroundings and signal quality. Outdoors with a clear sky, GPS can often be very accurate. Indoors or near tall buildings, the result may be less precise.</p>
+<table>
+<tr><th>Environment</th><th>Typical accuracy</th></tr>
+<tr><td>Open outdoor area</td><td>Often within a few metres</td></tr>
+<tr><td>Residential streets</td><td>Usually good, but may vary</td></tr>
+<tr><td>City centre with tall buildings</td><td>May be less accurate due to reflections</td></tr>
+<tr><td>Indoors</td><td>Often relies more on Wi-Fi or network location</td></tr>
+<tr><td>Laptop without GPS hardware</td><td>May rely mainly on Wi-Fi or IP location</td></tr>
+</table>
+<p class="note">WhereAmI displays the accuracy estimate supplied by your browser or device. It should be treated as a useful guide, not a legal guarantee.</p>
+</section>
+
+<section class="card">
+<h2>Why can GPS be inaccurate?</h2>
+<div class="grid">
+<div><h3>🏙 Tall buildings</h3><p>Buildings can block or reflect satellite signals, especially in city streets.</p></div>
+<div><h3>🌲 Trees and hills</h3><p>Dense tree cover, hills and valleys can weaken or obstruct signals.</p></div>
+<div><h3>🏠 Indoor use</h3><p>Walls and roofs can block satellite signals, so your device may use Wi-Fi instead.</p></div>
+<div><h3>📱 Device differences</h3><p>Phones, tablets and laptops can have different location hardware and settings.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>How WhereAmI uses your location</h2>
+<p>When you press <strong>Find my location</strong>, your browser asks whether you want to share your location. If you allow it, the browser sends WhereAmI an estimated position.</p>
+<p>WhereAmI can then show details such as your approximate address, latitude, longitude, accuracy estimate, date, time, map link and downloadable certificate.</p>
+<p>WhereAmI does not control the satellite system or the calculations performed by your device. It presents the location information provided by your browser in a clear, useful format.</p>
+</section>
+
+<section class="card">
+<h2>Frequently asked questions</h2>
+<h3>Does GPS need the internet?</h3>
+<p>GPS signals come from satellites, but internet access can help your device load maps, speed up location detection and improve address lookup.</p>
+<h3>Why is my phone more accurate than my laptop?</h3>
+<p>Many phones contain dedicated GPS/GNSS hardware. Some laptops rely mainly on Wi-Fi or IP-based location.</p>
+<h3>Does WhereAmI track me?</h3>
+<p>Your browser controls location permission. WhereAmI only receives location information when you choose to allow it for the feature you are using.</p>
+</section>
+
+<section class="card">
+<h2>Explore more WhereAmI guides</h2>
+<p>Useful future guides will include location accuracy, GPS vs Wi-Fi positioning, browser permissions, latitude and longitude, and sharing your location safely.</p>
+<p><a href="index.html">Return to WhereAmI</a></p>
+</section>
+</main>
+
+<footer>
+<p>© 2026 WhereAmI</p>
+<p><a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a> · <a href="contact.html">Contact</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Accurate Is GPS? | WhereAmI</title>
+<meta name="description" content="Learn how accurate GPS can be, what affects GPS accuracy, and how to improve the quality of your location results.">
+<style>
+:root{--bg1:#071a2f;--bg2:#12385f;--card:rgba(255,255,255,.08);--card2:rgba(255,255,255,.12);--text:#fff;--muted:#c9d8e8;--accent:#63c7ff;--accent2:#9fd3ff;--line:rgba(255,255,255,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top left,rgba(99,199,255,.2),transparent 30%),linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);line-height:1.7}
+header{text-align:center;padding:30px 20px;background:rgba(0,0,0,.2);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+nav a{color:#fff;text-decoration:none;padding:9px 14px;border:1px solid rgba(255,255,255,.35);border-radius:999px}
+main{max-width:1080px;margin:auto;padding:30px 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:22px;box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+h2,h3{color:var(--accent2)}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left}
+th{background:rgba(255,255,255,.08)}
+.note{border-left:4px solid var(--accent);background:rgba(99,199,255,.1);padding:14px;border-radius:10px;color:var(--muted)}
+footer{text-align:center;padding:28px;color:var(--muted);border-top:1px solid var(--line)}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 WhereAmI</h1>
+<p>Understanding GPS accuracy and what influences it.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="how-gps-works.html">How GPS Works</a>
+<a href="why-location-can-be-inaccurate.html">Location Accuracy</a>
+<a href="gps-vs-wifi-location.html">GPS vs Wi-Fi</a>
+<a href="latitude-and-longitude-explained.html">Coordinates</a>
+</nav>
+</header>
+
+<main>
+
+<div class="card">
+<h2>How accurate is GPS?</h2>
+<p>Modern GPS technology is remarkably accurate, but the result you receive depends on your surroundings, your device and the signals available at the time. Outdoors, many modern smartphones can estimate your location within a few metres. Indoors or in built-up areas, the estimate may be much less precise.</p>
+</div>
+
+<div class="card">
+<h2>Typical GPS accuracy</h2>
+<table>
+<tr><th>Environment</th><th>Typical accuracy</th></tr>
+<tr><td>Open countryside</td><td>Often within 1–5 metres</td></tr>
+<tr><td>Parks and open spaces</td><td>Usually within 3–10 metres</td></tr>
+<tr><td>Residential streets</td><td>Typically within 5–15 metres</td></tr>
+<tr><td>City centres</td><td>Often 10–30 metres or more</td></tr>
+<tr><td>Inside buildings</td><td>Can vary from tens to hundreds of metres</td></tr>
+</table>
+<p class="note">These figures are approximate examples. Actual accuracy depends on your equipment and local conditions.</p>
+</div>
+
+<div class="card">
+<h2>What affects GPS accuracy?</h2>
+<div class="grid">
+<div><h3>🛰 Satellite visibility</h3><p>The more satellites your device can receive clearly, the better the result is likely to be.</p></div>
+<div><h3>🏙 Buildings</h3><p>Tall buildings can block or reflect signals, making the reported position less accurate.</p></div>
+<div><h3>🌲 Trees</h3><p>Dense foliage can weaken satellite signals.</p></div>
+<div><h3>📱 Device quality</h3><p>Newer phones often contain better GNSS receivers and antennas than older devices.</p></div>
+<div><h3>🏠 Indoors</h3><p>Walls and roofs reduce satellite reception, so Wi-Fi or network positioning may be used instead.</p></div>
+<div><h3>🌐 Assisted positioning</h3><p>Many devices combine GPS with Wi-Fi and mobile networks to improve speed and reliability.</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Does more decimal places mean greater accuracy?</h2>
+<p>Not necessarily. A coordinate shown to six decimal places may look extremely precise, but the underlying measurement may still only be accurate to several metres. The number of digits displayed should not be confused with the true accuracy of the location measurement.</p>
+</div>
+
+<div class="card">
+<h2>How can I improve GPS accuracy?</h2>
+<ul>
+<li>Go outdoors where there is a clear view of the sky.</li>
+<li>Allow your device a few extra seconds to refine its position.</li>
+<li>Enable Wi-Fi as well as GPS if appropriate.</li>
+<li>Keep your operating system and browser updated.</li>
+<li>Avoid standing close to very tall buildings where possible.</li>
+<li>Use a modern smartphone with location services enabled.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>How WhereAmI reports accuracy</h2>
+<p>WhereAmI displays the location estimate supplied by your browser or device. The reported accuracy is generated by your device's positioning system and is presented to help you understand how reliable the current estimate may be.</p>
+<p>WhereAmI does not calculate the GPS accuracy itself and cannot improve or reduce the accuracy reported by your device.</p>
+</div>
+
+<div class="card">
+<h2>Frequently Asked Questions</h2>
+<h3>Is GPS always accurate to a few metres?</h3>
+<p>No. Accuracy varies depending on the environment and the quality of available signals.</p>
+<h3>Why is my laptop less accurate than my phone?</h3>
+<p>Many laptops rely mainly on Wi-Fi positioning, while smartphones often include dedicated satellite navigation hardware.</p>
+<h3>Can weather affect GPS?</h3>
+<p>Normal weather has only a small effect, but local conditions and obstructions often have a much larger influence.</p>
+</div>
+
+<div class="card">
+<h2>Related guides</h2>
+<ul>
+<li><a href="how-gps-works.html">How GPS Works</a></li>
+<li><a href="why-location-can-be-inaccurate.html">Why Location Can Be Inaccurate</a></li>
+<li><a href="gps-vs-wifi-location.html">GPS vs Wi-Fi Location</a></li>
+<li><a href="browser-location-permissions.html">Browser Location Permissions</a></li>
+<li><a href="latitude-and-longitude-explained.html">Latitude and Longitude Explained</a></li>
+</ul>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 WhereAmI</p>
+<p><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></p>
+</footer>
+</body>
+</html>
