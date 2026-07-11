@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Location Can Be Inaccurate | WhereAmI</title>
+<meta name="description" content="Learn why GPS and browser location results can sometimes be inaccurate, and how to improve your device's location estimate.">
+<style>
+:root{--bg1:#071a2f;--bg2:#12385f;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.16);--text:#fff;--muted:#c9d8e8;--accent:#63c7ff;--accent2:#a9ddff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:linear-gradient(135deg,var(--bg1),var(--bg2));line-height:1.7}
+header{text-align:center;padding:32px 20px;background:rgba(0,0,0,.2);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+nav a{color:#fff;text-decoration:none;padding:8px 13px;border:1px solid var(--line);border-radius:999px}
+main{max-width:1050px;margin:auto;padding:30px 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+h2,h3{color:var(--accent2)}
+a{color:var(--accent)}
+.note{border-left:4px solid var(--accent);padding:14px;background:rgba(99,199,255,.1);border-radius:10px;color:var(--muted)}
+footer{text-align:center;padding:26px;border-top:1px solid var(--line);color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+<h1>🎯 Why Location Can Be Inaccurate</h1>
+<p>Why your phone, computer or browser may sometimes show the wrong place.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="how-gps-works.html">How GPS Works</a>
+<a href="gps-vs-wifi-location.html">GPS vs Wi-Fi</a>
+<a href="how-accurate-is-gps.html">GPS Accuracy</a>
+</nav>
+</header>
+
+<main>
+<section class="card">
+<h2>Why is my location sometimes wrong?</h2>
+<p>Your device may combine GPS satellites, Wi-Fi networks, mobile phone masts and internet information to estimate your position. These sources can be incomplete, delayed or inconsistent, so the result may not always match your exact location.</p>
+</section>
+
+<section class="grid">
+<div class="card"><h3>🏙 Tall buildings</h3><p>Buildings can block or reflect satellite signals, causing the reported position to shift.</p></div>
+<div class="card"><h3>🏠 Indoor use</h3><p>Walls and roofs weaken GPS signals, so your device may rely more heavily on Wi-Fi or network positioning.</p></div>
+<div class="card"><h3>🌲 Trees and hills</h3><p>Dense foliage, steep valleys and other obstructions can reduce satellite visibility.</p></div>
+<div class="card"><h3>📶 Wi-Fi databases</h3><p>If a router has moved or has been recorded incorrectly, Wi-Fi positioning may place you in the wrong area.</p></div>
+<div class="card"><h3>📡 Mobile networks</h3><p>Location based on nearby phone masts is usually less precise than a strong GPS result.</p></div>
+<div class="card"><h3>💻 VPNs and IP addresses</h3><p>IP-based location may show your internet provider or VPN endpoint rather than your physical position.</p></div>
+<div class="card"><h3>📱 Device hardware</h3><p>Older devices and laptops without dedicated GPS hardware may provide broader estimates.</p></div>
+<div class="card"><h3>🛰 Too few satellites</h3><p>When only a small number of satellites are visible, the device has less information to work with.</p></div>
+</section>
+
+<section class="card">
+<h2>How can I improve the result?</h2>
+<ul>
+<li>Move outdoors or near a window.</li>
+<li>Allow a few seconds for the device to refine its position.</li>
+<li>Enable Wi-Fi as well as location services.</li>
+<li>Avoid tunnels, basements and areas surrounded by tall buildings.</li>
+<li>Keep your browser and operating system updated.</li>
+<li>Use a smartphone when you need the best chance of a precise result.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>How WhereAmI reports location</h2>
+<p>WhereAmI displays the location information supplied by your browser and device. It does not independently calculate your position or control the quality of the GPS, Wi-Fi or network signals.</p>
+<p class="note">The displayed accuracy is an estimate and should not be treated as guaranteed legal proof of location.</p>
+</section>
+
+<section class="card">
+<h2>Related guides</h2>
+<ul>
+<li><a href="how-gps-works.html">How GPS Works</a></li>
+<li><a href="gps-vs-wifi-location.html">GPS vs Wi-Fi Positioning</a></li>
+<li><a href="browser-location-permissions.html">Browser Location Permissions</a></li>
+<li><a href="latitude-and-longitude-explained.html">Latitude and Longitude Explained</a></li>
+<li><a href="how-accurate-is-gps.html">How Accurate Is GPS?</a></li>
+</ul>
+</section>
+</main>
+
+<footer>
+© 2026 WhereAmI · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a>
+</footer>
+</body>
+</html>
