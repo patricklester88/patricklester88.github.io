@@ -1,73 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110487535997548" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use - WhereAmI?</title>
+
+<title>Terms of Use | WhereAmI</title>
+<meta name="description" content="Read the WhereAmI Terms of Use, including location accuracy, acceptable use, certificates, third-party services and limitations.">
+<meta name="theme-color" content="#071a2f">
+
 <style>
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{margin:0;min-height:100vh;background:linear-gradient(135deg,#101827,#1f3b57);color:white;display:flex;align-items:center;justify-content:center;padding:24px}
-.card{width:100%;max-width:850px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:32px;backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
-h1{margin:0 0 10px;font-size:48px}
-.tagline{color:#d7e6f5;line-height:1.6;margin-bottom:24px}
-a{color:white;font-weight:bold}
-.page-nav{margin:0 0 24px;color:#d7e6f5;font-size:14px;line-height:1.8}
-.page-nav a{margin:0 7px;white-space:nowrap}
-.content{text-align:left;background:rgba(0,0,0,.25);border-radius:18px;padding:22px;margin-top:20px;line-height:1.65}
-.content h2{color:white;margin:22px 0 10px;font-size:24px}
-.content h2:first-child{margin-top:0}
-.content p,.content li{color:#eef6ff;font-size:16px}
-.content ul{padding-left:22px}
-.notice{background:rgba(255,255,255,.12);border-left:5px solid #aac8e8;border-radius:14px;padding:16px 18px;margin:18px 0;color:#eef6ff}
-.ad-box{margin-top:25px;padding:18px;border:1px dashed rgba(255,255,255,.4);border-radius:15px;color:#d7e6f5;text-align:center}
-.small{margin-top:22px;color:#bdd0e1;font-size:13px;line-height:1.5}
-.footer{margin-top:30px;font-size:14px;color:#d7e6f5}
-.footer a{margin:0 8px}
+:root{
+  --bg:#061525;
+  --bg2:#0b2d4d;
+  --panel:rgba(255,255,255,.075);
+  --panel2:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.16);
+  --text:#f6fbff;
+  --muted:#bfd2e3;
+  --accent:#49b9ff;
+  --accent2:#a9ddff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  color:var(--text);
+  line-height:1.7;
+  background:
+    radial-gradient(circle at 15% 5%,rgba(73,185,255,.20),transparent 30%),
+    linear-gradient(145deg,var(--bg),var(--bg2));
+}
+
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(6,21,37,.87);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.brand{
+  color:#fff;
+  text-decoration:none;
+  font-size:1.35rem;
+  font-weight:800;
+}
+
+.navlinks{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.navlinks a{
+  color:#e9f5ff;
+  text-decoration:none;
+  padding:8px 11px;
+  border-radius:999px;
+}
+
+.navlinks a:hover{
+  background:rgba(255,255,255,.08);
+}
+
+.hero{
+  text-align:center;
+  padding:70px 20px 36px;
+}
+
+.eyebrow{
+  display:inline-block;
+  padding:7px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:var(--accent2);
+}
+
+h1{
+  margin:18px 0 12px;
+  font-size:clamp(2.6rem,7vw,4.8rem);
+  line-height:1.05;
+}
+
+.lead{
+  max-width:760px;
+  margin:auto;
+  color:var(--muted);
+  font-size:1.08rem;
+}
+
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:28px;
+  margin-bottom:22px;
+  box-shadow:0 22px 70px rgba(0,0,0,.28);
+}
+
+.panel h2{
+  color:var(--accent2);
+  margin-top:0;
+}
+
+.panel h3{
+  color:var(--accent2);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+
+.card{
+  background:var(--panel2);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+}
+
+.note{
+  border-left:4px solid var(--accent);
+  padding:14px 16px;
+  background:rgba(73,185,255,.10);
+  border-radius:10px;
+  color:var(--muted);
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:34px 0;
+  text-align:center;
+  color:var(--muted);
+}
+
+.footerlinks{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+@media(max-width:820px){
+  .navlinks{display:none}
+  .grid{grid-template-columns:1fr}
+  .panel{padding:21px}
+}
 </style>
 </head>
+
 <body>
-<div class="card">
-<div class="page-nav">
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="terms.html">Terms</a> |
-<a href="privacy.html">Privacy</a> |
-<a href="cookies.html">Cookies</a> |
-<a href="faq.html">FAQ</a> |
-<a href="contact.html">Contact</a>
-</div>
-<h1>WhereAmI?</h1>
-<p class="tagline">The basic rules for using WhereAmI?.</p>
-<div class="content">
 
-<h2>Terms of Use</h2>
-<div class="notice">These terms explain the basic rules for using WhereAmI?. By using this website, you agree to use it responsibly and understand that location results are approximate.</div>
-<h2>1. About this website</h2>
-<p>WhereAmI? is a simple browser-based location tool. It may show your approximate street, nearest address, map link and a downloadable location certificate.</p>
-<h2>2. Location accuracy</h2>
-<p>Location information is provided by your device, browser, network and mapping data. It may be inaccurate, delayed, incomplete or unavailable. Indoor use, desktop computers, VPNs, mobile signal issues and browser settings may affect accuracy.</p>
-<h2>3. Not legal, emergency or professional proof</h2>
-<p>WhereAmI? certificates and location results are for general information only. They should not be treated as legal proof of location, identity, attendance, delivery, safety, medical status or emergency status.</p>
-<h2>4. Your responsibility</h2>
-<p>You are responsible for deciding whether the information is suitable for your situation. Do not rely on this website where an inaccurate location could cause harm, loss, delay or danger.</p>
-<h2>5. Acceptable use</h2>
-<p>Do not misuse the website, interfere with its operation, attempt unauthorised access, or use it for unlawful, harmful, misleading or abusive purposes.</p>
-<h2>6. No warranty</h2>
-<p>The website is provided on an “as available” basis without guarantees that it will always be accurate, available, secure or error-free.</p>
+<div class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">🌍 WhereAmI</a>
 
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#find">Find location</a>
+      <a href="index.html#guides">GPS guides</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </div>
-<div class="ad-box">Advertisement space<br>Replace this box later with your Google AdSense code after the site is approved.</div>
-<p class="small">Your browser will ask permission before sharing location. This demo does not store your location.</p>
-<div class="footer"><hr>
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="terms.html">Terms</a> |
-<a href="privacy.html">Privacy</a> |
-<a href="cookies.html">Cookies</a> |
-<a href="faq.html">FAQ</a> |
-<a href="contact.html">Contact</a>
-</div>
-</div>
+
+<header class="hero wrap">
+  <span class="eyebrow">Please read before using the service</span>
+  <h1>Terms of Use</h1>
+  <p class="lead">
+    These terms explain the rules for using WhereAmI, the limitations of location information,
+    and your responsibilities when using or sharing a location certificate.
+  </p>
+</header>
+
+<main class="wrap">
+
+<section class="panel">
+  <h2>1. About these terms</h2>
+  <p>
+    By accessing or using WhereAmI, you agree to these Terms of Use.
+    If you do not agree, please do not use the website or its location features.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>2. About the service</h2>
+  <p>
+    WhereAmI is a browser-based location tool and educational website.
+    It may display coordinates, an approximate address, a reported accuracy estimate,
+    date and time, map links and a printable location certificate.
+  </p>
+  <p>
+    The service also provides general educational information about GPS,
+    Wi-Fi positioning, browser permissions, latitude and longitude, and related topics.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>3. Location accuracy</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Device supplied</h3>
+      <p>Your browser and device provide the underlying location estimate.</p>
+    </div>
+
+    <div class="card">
+      <h3>May be inaccurate</h3>
+      <p>Indoor use, buildings, trees, VPNs, weak signals and network data may affect results.</p>
+    </div>
+
+    <div class="card">
+      <h3>May be delayed</h3>
+      <p>Location information can be incomplete, outdated or temporarily unavailable.</p>
+    </div>
+
+    <div class="card">
+      <h3>No guaranteed precision</h3>
+      <p>The number of decimal places shown does not guarantee the true accuracy of the measurement.</p>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>4. Not legal, emergency or professional proof</h2>
+  <p>
+    WhereAmI results and certificates are provided for general information only.
+    They must not be treated as guaranteed legal proof of location, identity, attendance,
+    delivery, safety, medical status, emergency status or any professional fact.
+  </p>
+  <p class="note">
+    In an emergency, contact the appropriate emergency services directly and do not rely solely on this website.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>5. Your responsibility</h2>
+  <p>
+    You are responsible for deciding whether the information is suitable for your situation.
+    Do not rely on WhereAmI where an inaccurate location could cause harm, loss, delay or danger.
+  </p>
+  <p>
+    You are also responsible for how you save, print, store, share or present any location certificate.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>6. Acceptable use</h2>
+  <p>You must not:</p>
+
+  <ul>
+    <li>Use the website for unlawful, harmful, misleading or abusive purposes.</li>
+    <li>Attempt unauthorised access to the website, hosting or connected services.</li>
+    <li>Interfere with or disrupt the operation of the website.</li>
+    <li>Use automated systems in a way that places an unreasonable burden on the service.</li>
+    <li>Misrepresent a certificate as guaranteed official or legal proof.</li>
+    <li>Use the service to invade another person's privacy or safety.</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>7. Certificates and downloads</h2>
+  <p>
+    Certificates are created from information supplied by your browser and device at the relevant time.
+    They may contain estimated coordinates, address information and accuracy data.
+  </p>
+  <p>
+    You should review a certificate before using or sharing it.
+    WhereAmI does not guarantee that certificate information is complete, precise or suitable for a particular purpose.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>8. Third-party services and links</h2>
+  <p>
+    WhereAmI may rely on or link to third-party services, including hosting,
+    maps, address lookup, analytics and advertising providers.
+  </p>
+  <p>
+    Those services operate under their own terms and privacy policies.
+    WhereAmI is not responsible for the availability, accuracy, security or content of external services.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>9. Intellectual property</h2>
+  <p>
+    Unless otherwise stated, the website design, original text and original materials are owned by or licensed to WhereAmI.
+    You may use the website for personal, lawful purposes.
+  </p>
+  <p>
+    You may not copy, republish or commercially exploit substantial parts of the website without permission,
+    except where the law allows.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>10. No warranty</h2>
+  <p>
+    The website is provided on an <strong>“as available”</strong> basis.
+    We do not guarantee that it will always be accurate, available, uninterrupted, secure or error-free.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>11. Limitation of liability</h2>
+  <p>
+    To the fullest extent permitted by law, WhereAmI is not liable for losses arising from reliance on inaccurate,
+    delayed or unavailable location information, or from the use, storage or sharing of certificates.
+  </p>
+  <p>
+    Nothing in these terms excludes or limits liability where it cannot legally be excluded or limited.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>12. Changes to the website or terms</h2>
+  <p>
+    The website and these terms may be updated from time to time.
+    The latest version will always be published on this page.
+  </p>
+  <p><strong>Last updated:</strong> 5 August 2026</p>
+</section>
+
+<section class="panel">
+  <h2>13. Contact</h2>
+  <p>
+    For questions about these terms, email
+    <a href="mailto:whereami3011@gmail.com">whereami3011@gmail.com</a>.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footerlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="terms.html">Terms</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>© 2026 WhereAmI</div>
+  </div>
+</footer>
+
 </body>
 </html>
